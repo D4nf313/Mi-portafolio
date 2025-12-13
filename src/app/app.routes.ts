@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { ExperienceComponent } from './pages/experience/experience.component';
 
 export const routes: Routes = [
   {
@@ -15,6 +16,12 @@ export const routes: Routes = [
         loadComponent: () =>
           import('./pages/about/about.component')
             .then(m => m.AboutComponent)
+      },
+        {
+        path: 'experience',
+        loadComponent: () =>
+          import('./pages/experience/experience.component')
+            .then(m => m.ExperienceComponent)
       },
       {
         path: 'projects',

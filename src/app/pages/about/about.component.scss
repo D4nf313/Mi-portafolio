@@ -1,0 +1,118 @@
+
+
+.about-section {
+
+  min-height: 100vh;
+  padding: 80px 24px;
+  background: #1c2533;
+  color: #dcdcdc;
+}
+
+/* Título */
+.section-title {
+  text-align: center;
+  font-size: 2.6rem;
+  font-weight: 300;
+  margin-bottom: 16px;
+}
+
+.section-divider {
+  width: 200px;
+  height: 2px;
+  background: #8e7cc3;
+  margin: 0 auto 60px;
+}
+
+/* Quién soy */
+.about-me {
+  display: flex;
+  gap: 48px;
+  align-items: center;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto 80px;
+  flex-wrap: wrap;
+}
+
+.about-photo img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 2px solid #8e7cc3;
+  object-fit: cover;
+}
+
+.about-text {
+  max-width: 600px;
+}
+
+.about-text h3 {
+  margin-bottom: 16px;
+  font-weight: 400;
+}
+
+/* Skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.skills-title {
+  font-weight: 300;
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.skills-divider {
+  width: 120px;
+  height: 2px;
+  background: #8e7cc3;
+  margin-bottom: 32px;
+}
+
+/* Tech skills */
+.tech-skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+}
+
+.skill {
+  padding: 12px;
+  border: 1px solid #8e7cc3;
+  text-align: center;
+  letter-spacing: 0.1em;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.skill:hover {
+  background: #8e7cc3;
+  color: #111;
+}
+
+/* Soft skills */
+.soft-skills {
+  list-style: none;
+  padding: 0;
+}
+
+.soft-skills li {
+  margin-bottom: 16px;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+}
+
+
+
+
+/* Responsive */
+@media (max-width: 900px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+}

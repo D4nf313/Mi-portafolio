@@ -1,0 +1,51 @@
+.experience-section {
+      min-height: 100vh;
+      padding: 80px 24px;
+      background: #1c2533;
+      color: #dcdcdc;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.6rem;
+      font-weight: 300;
+      margin-bottom: 16px;
+    }
+
+    .section-divider {
+      width: 200px;
+      height: 2px;
+      background: #8e7cc3;
+      margin: 0 auto 60px;
+    }
+
+    .role {
+      font-style: italic;
+      margin: 8px 0 12px 0;
+    }
+
+    .experience-list {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 8px;
+    }
+
+    .experience-list li {
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+
+    ::ng-deep .mat-expansion-panel-header {
+      border-left: 4px solid #8e7cc3;
+    }
+
+    ::ng-deep .mat-expansion-panel-header.mat-expanded {
+      background: #8e7cc3;
+      color: #111;
+    }
+
+    @media (max-width: 900px) {
+      .experience-section {
+        padding: 60px 16px;
+      }
+    }
