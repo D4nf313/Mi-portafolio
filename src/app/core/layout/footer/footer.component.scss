@@ -1,0 +1,21 @@
+.footer {
+      padding: 24px 16px;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: space-between;
+    }
+
+    .footer-section {
+      min-width: 200px;
+    }
+
+    .footer-bottom {
+      margin-top: 16px;
+      text-align: center;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }

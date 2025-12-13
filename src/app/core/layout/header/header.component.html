@@ -1,0 +1,40 @@
+<mat-toolbar color="primary" class="navbar">
+      <span class="logo">Daniel Suárez</span>
+
+      <span class="spacer"></span>
+
+      <nav class="nav-links">
+        <a
+          mat-button
+          routerLink="/portafolio-daniel-suarez-full-stack"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          Home
+        </a>
+
+        <a
+          mat-button
+          routerLink="/portafolio-daniel-suarez-full-stack/about"
+          routerLinkActive="active"
+        >
+          About
+        </a>
+
+        <a
+          mat-button
+          routerLink="/portafolio-daniel-suarez-full-stack/projects"
+          routerLinkActive="active"
+        >
+          Projects
+        </a>
+
+        <a
+          mat-button
+          routerLink="/portafolio-daniel-suarez-full-stack/contact"
+          routerLinkActive="active"
+        >
+          Contact
+        </a>
+      </nav>
+    </mat-toolbar>
