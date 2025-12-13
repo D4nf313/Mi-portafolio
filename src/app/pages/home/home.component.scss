@@ -13,17 +13,6 @@
   background-image: url('https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/img/demo-1-bg.jpg');
 }
 
-.main-title {
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  color: #f9f1e9;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate3d(-50%,-50%,0);
-  transform: translate3d(-50%,-50%,0);
-}
 
 .demo-1 .main-title {
   text-transform: uppercase;
@@ -38,5 +27,78 @@
 @media only screen and (max-width : 768px) {
   .demo-1 .main-title {
     font-size: 3em;
+  }
+}
+
+/* === HERO CONTENT === */
+/* Ajuste general del bloque */
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -45%);
+  text-align: center;
+  z-index: 2;
+  width: 100%;
+  max-width: 900px;
+  padding: 0 16px;
+}
+
+
+
+/* Nombre principal */
+.main-title {
+  margin: 0;
+  font-size: 5.2rem;
+  letter-spacing: 0.25em;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #f9f1e9;
+}
+
+/* Subtítulo */
+.hero-subtitle {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  opacity: 0.75;
+    color: #f9f1e9;
+}
+
+/* Botón */
+.hero-button {
+  margin-top: 40px;
+  padding: 14px 40px;
+  font-size: 0.9rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  border: 1px solid #f9f1e9;
+  background: transparent;
+  color: #f9f1e9;
+  cursor: pointer;
+  transition: all 0.35s ease;
+}
+
+.hero-button:hover {
+  background: #f9f1e9;
+  color: #111;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 3rem;
+    letter-spacing: 0.15em;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    letter-spacing: 0.2em;
+  }
+
+  .hero-button {
+    margin-top: 28px;
+    padding: 12px 28px;
   }
 }
