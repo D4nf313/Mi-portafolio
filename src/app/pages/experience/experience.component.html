@@ -1,18 +1,32 @@
 <section class="experience-section">
-  <!-- TÍTULO -->
-  <h2 class="section-title">Experiencia Laboral</h2>
-  <div class="section-divider"></div>
 
-  <mat-accordion multi>
-    <mat-expansion-panel *ngFor="let exp of experiences">
-      <mat-expansion-panel-header>
-        {{ exp.company }} · {{ exp.date }}
-      </mat-expansion-panel-header>
+      <!-- TÍTULO -->
+      <h2 class="section-title">Experiencia Laboral</h2>
+      <div class="section-divider"></div>
 
-      <p class="role">{{ exp.role }} · {{ exp.location }}</p>
-      <ul class="experience-list">
-        <li *ngFor="let item of exp.details">{{ item }}</li>
-      </ul>
-    </mat-expansion-panel>
-  </mat-accordion>
-</section>
+      <!-- TIMELINE -->
+      <div class="timeline">
+
+        <div
+          class="timeline-item"
+          *ngFor="let exp of experiences; let last = last"
+        >
+          <!-- PUNTO -->
+          <div class="timeline-marker"></div>
+
+          <!-- CARD -->
+          <div class="timeline-content">
+            <h3 class="company">{{ exp.company }}</h3>
+            <span class="date">{{ exp.date }}</span>
+            <p class="role">{{ exp.role }} · {{ exp.location }}</p>
+
+            <ul class="experience-list">
+              <li *ngFor="let item of exp.details">
+                {{ item }}
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
