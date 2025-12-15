@@ -1,27 +1,34 @@
-# PortafolioProyect
+Este proyecto es un **portafolio personal** desarrollado con **Angular 17**.  
+Muestra mis habilidades, experiencia y proyectos, e incluye un **formulario de contacto** con validaciones, así como **links directos a GitHub y LinkedIn**.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
+---
 
-## Development server
+El header de la página principal incluye un **efecto animado de partículas** interactivo, desarrollado usando **HTML Canvas y TypeScript** dentro de Angular.  
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Cada partícula se mueve suavemente alrededor de su posición original.  
+- Las partículas se conectan con líneas cuando el cursor se acerca, creando un efecto de red dinámica.  
+- El efecto se adapta al tamaño de la ventana y se detiene al hacer scroll para mejorar el rendimiento.  
+- Se utilizó Angular 17 y **MatButtonModule de Angular Material** para los botones sobre el header.  
 
-## Code scaffolding
+**Tecnologías usadas:**  
+- Angular 17  
+- TypeScript  
+- HTML Canvas 2D  
+- CSS/SCSS para estilos responsivos  
+- Angular Material para botones interactivos  
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 💻 Requisitos
 
-## Running unit tests
+- **Node.js**: versión **18.x o superior** (compatible con Angular 17)  
+- **Angular CLI**: versión **17.x**
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Verifica la versión de Node.js instalada:
 
-## Running end-to-end tests
+```bash
+node -v
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Instalacion
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+npm install -g @angular/cli@17
