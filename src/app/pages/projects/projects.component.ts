@@ -13,7 +13,7 @@ import { MatChipsModule } from '@angular/material/chips';
 export class ProjectsComponent {
   projects = [
     {
-      name: 'E-commerce de Tenis',
+      name: 'Olimpia Sports',
       type: 'Aplicación Web',
       description:
         'Plataforma de comercio electrónico para venta de tenis, con catálogo de productos, carrito de compras y gestión de pedidos.',
@@ -26,6 +26,21 @@ export class ProjectsComponent {
         'E-commerce enfocado en productos agrícolas, conectando productores locales con compradores finales.',
       stack: ['JavaScript Vanilla', 'Bootstrap', 'Spring Boot', 'MySQL'],
     },
+    {
+      name: 'NASA Satellite Viewer',
+      type: 'Aplicación Web',
+      description:
+        'Aplicación que consume la API de la NASA para mostrar imágenes satelitales recientes. Permite al usuario guardar sus imágenes favoritas en LocalStorage para consultarlas después.',
+      stack: ['JavaScript Vanilla', 'Bootstrap', 'LocalStorage', 'NASA API'],
+    },
+    {
+      name: 'Pokémon Finder',
+      type: 'Aplicación Web',
+      description:
+        'Aplicación que consume la API de Pokémon (PokeAPI) para buscar y mostrar información de cualquier Pokémon. Permite guardar Pokémon favoritos en LocalStorage para consultarlos después.',
+      stack: ['JavaScript Vanilla', 'Bootstrap', 'LocalStorage', 'PokeAPI'],
+    },
+
     {
       name: 'Info Colombia API',
       type: 'Consumo de API',
