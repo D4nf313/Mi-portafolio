@@ -2,3 +2,40 @@
       padding: 16px;
       min-height: calc(100vh - 128px);
     }
+    
+/* ===== SUCCESS DIALOG DARK PURPLE ===== */
+.success-dialog-dark .mat-mdc-dialog-surface {
+  background-color: #1c2533 !important;
+  color: #e6e6e6 !important;
+
+  border: 1px solid #8e7cc3;
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(142, 124, 195, 0.45);
+}
+
+/* TÍTULO */
+.success-dialog-dark .mat-mdc-dialog-title {
+  color: #f0eaff !important;
+  font-weight: 400;
+}
+
+/* CONTENIDO */
+.success-dialog-dark .mat-mdc-dialog-content,
+.success-dialog-dark .mat-mdc-dialog-content p,
+.success-dialog-dark .mat-mdc-dialog-content span {
+  color: #e0e0e0 !important;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* BOTÓN */
+.success-dialog-dark .mat-mdc-raised-button {
+  background-color: #8e7cc3 !important;
+  color: #111 !important;
+}
+
+/* QUITA OPACIDADES HEREDADAS */
+.success-dialog-dark * {
+  opacity: 1 !important;
+}
+
