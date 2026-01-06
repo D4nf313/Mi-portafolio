@@ -35,13 +35,13 @@
 }
 
 .about-photo img {
-  width: 180px;
-  height: 180px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   border: 2px solid #8e7cc3;
-  object-fit: cover;
+  object-fit: contain;   /* 👈 clave */
+  background-color: #ffffff;
 }
-
 .about-text {
   max-width: 600px;
 }
