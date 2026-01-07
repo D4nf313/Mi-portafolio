@@ -9,6 +9,7 @@
         <mat-card
           class="project-card"
           *ngFor="let project of projects"
+            (click)="openGithub(project.githubUrl)"
         >
           <mat-card-header>
             <mat-card-title>{{ project.name }}</mat-card-title>

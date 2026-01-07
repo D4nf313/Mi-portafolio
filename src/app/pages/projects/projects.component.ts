@@ -18,6 +18,7 @@ export class ProjectsComponent {
       description:
         'Plataforma de comercio electrónico para venta de tenis, con catálogo de productos, carrito de compras y gestión de pedidos.',
       stack: ['JavaScript Vanilla', 'Bootstrap', 'Spring Boot', 'MySQL'],
+      githubUrl: 'https://github.com/D4nf313/Hackaton-tienda-deportiva-OlimpiaSport',
     },
     {
       name: 'Tierra Viva',
@@ -25,6 +26,7 @@ export class ProjectsComponent {
       description:
         'E-commerce enfocado en productos agrícolas, conectando productores locales con compradores finales.',
       stack: ['JavaScript Vanilla', 'Bootstrap', 'Spring Boot', 'MySQL'],
+      githubUrl: 'https://github.com/TierraVivaa/tierra-viva-frontend',
     },
     {
       name: 'NASA Satellite Viewer',
@@ -32,6 +34,7 @@ export class ProjectsComponent {
       description:
         'Aplicación que consume la API de la NASA para mostrar imágenes satelitales recientes. Permite al usuario guardar sus imágenes favoritas en LocalStorage para consultarlas después.',
       stack: ['JavaScript Vanilla', 'Bootstrap', 'LocalStorage', 'NASA API'],
+      githubUrl: 'https://github.com/Boxwel/Lab-Api-Nasa',
     },
     {
       name: 'Pokémon Finder',
@@ -39,21 +42,27 @@ export class ProjectsComponent {
       description:
         'Aplicación que consume la API de Pokémon (PokeAPI) para buscar y mostrar información de cualquier Pokémon. Permite guardar Pokémon favoritos en LocalStorage para consultarlos después.',
       stack: ['JavaScript Vanilla', 'Bootstrap', 'LocalStorage', 'PokeAPI'],
+      githubUrl: 'https://github.com/D4nf313/web-search-pokemon',
     },
 
     {
-      name: 'Info Colombia API',
+      name: 'Rick and Morty APP',
       type: 'Consumo de API',
       description:
-        'Aplicación que consume una API pública para mostrar información relevante de Colombia como departamentos, municipios y datos generales.',
-      stack: ['Angular', 'REST API', 'RxJS'],
+        'Es una aplicación web desarrollada con Angular 19, que utiliza tecnologías modernas y mejores prácticas para proporcionar una experiencia interactiva, con autenticación de usuario, integración de reCAPTCHA, y consumo de API externa (Rick and Morty API).',
+      stack: ['Angular', 'REST API','reCAPTCHA', 'Ng Zorro','RxJS', 'SweetAlert2'],
+      githubUrl: 'https://github.com/D4nf313/heroes-app',
     },
     {
-      name: 'Perrito App',
+      name: 'Viajes App',
       type: 'Aplicación Web',
       description:
-        'Aplicación para visualizar información de perritos consumiendo una API pública, con filtros y vista detallada.',
-      stack: ['Angular', 'API REST', 'CSS'],
+        'Es una plataforma web que permite a los usuarios buscar ubicaciones exactas de sus destinos de viaje, teniendo un mapa donde pueden visualizar sus destinos, escogerlo y enviar la petición para que el equipo de trabajo pueda generar un plan de viaje..',
+      stack: ['Angular', 'Bootstrap', 'Leaflet','RxJS','Socket.io-client'],
+      githubUrl: 'https://github.com/D4nf313/viajesApp',
     },
   ];
+  openGithub(url: string) {
+    window.open(url, '_blank');
+  }
 }
