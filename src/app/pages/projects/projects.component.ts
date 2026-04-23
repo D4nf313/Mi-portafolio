@@ -1,67 +1,74 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { MatCardModule } from '@angular/material/card';
-import { MatChipsModule } from '@angular/material/chips';
+import { Component, inject } from '@angular/core';
+import { LanguageService } from '../../core/services/language.service';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule, MatCardModule, MatChipsModule],
+  imports: [CommonModule],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
 })
 export class ProjectsComponent {
+  lang = inject(LanguageService);
+
   projects = [
     {
-      name: 'Olimpia Sports',
-      type: 'Aplicación Web',
-      description:
-        'Plataforma de comercio electrónico para venta de tenis, con catálogo de productos, carrito de compras y gestión de pedidos.',
+      nameKey: 'Olimpia Sports',
+      typeKey: 'project.webapp',
+      descKey: 'proj.olimpia.desc',
       stack: ['JavaScript Vanilla', 'Bootstrap', 'Spring Boot', 'MySQL'],
       githubUrl: 'https://github.com/D4nf313/Hackaton-tienda-deportiva-OlimpiaSport',
+      emoji: '👟',
+      color: '#7c3aed',
     },
     {
-      name: 'Tierra Viva',
-      type: 'E-commerce Agro',
-      description:
-        'E-commerce enfocado en productos agrícolas, conectando productores locales con compradores finales.',
+      nameKey: 'Tierra Viva',
+      typeKey: 'project.ecommerce',
+      descKey: 'proj.tierra.desc',
       stack: ['JavaScript Vanilla', 'Bootstrap', 'Spring Boot', 'MySQL'],
       githubUrl: 'https://github.com/TierraVivaa/tierra-viva-frontend',
+      emoji: '🌱',
+      color: '#059669',
     },
     {
-      name: 'NASA Satellite Viewer',
-      type: 'Aplicación Web',
-      description:
-        'Aplicación que consume la API de la NASA para mostrar imágenes satelitales recientes. Permite al usuario guardar sus imágenes favoritas en LocalStorage para consultarlas después.',
+      nameKey: 'NASA Satellite Viewer',
+      typeKey: 'project.webapp',
+      descKey: 'proj.nasa.desc',
       stack: ['JavaScript Vanilla', 'Bootstrap', 'LocalStorage', 'NASA API'],
       githubUrl: 'https://github.com/Boxwel/Lab-Api-Nasa',
+      emoji: '🛰️',
+      color: '#0284c7',
     },
     {
-      name: 'Pokémon Finder',
-      type: 'Aplicación Web',
-      description:
-        'Aplicación que consume la API de Pokémon (PokeAPI) para buscar y mostrar información de cualquier Pokémon. Permite guardar Pokémon favoritos en LocalStorage para consultarlos después.',
+      nameKey: 'Pokémon Finder',
+      typeKey: 'project.webapp',
+      descKey: 'proj.pokemon.desc',
       stack: ['JavaScript Vanilla', 'Bootstrap', 'LocalStorage', 'PokeAPI'],
       githubUrl: 'https://github.com/D4nf313/web-search-pokemon',
+      emoji: '⚡',
+      color: '#d97706',
     },
-
     {
-      name: 'Rick and Morty APP',
-      type: 'Consumo de API',
-      description:
-        'Es una aplicación web desarrollada con Angular 19, que utiliza tecnologías modernas y mejores prácticas para proporcionar una experiencia interactiva, con autenticación de usuario, integración de reCAPTCHA, y consumo de API externa (Rick and Morty API).',
-      stack: ['Angular', 'REST API','reCAPTCHA', 'Ng Zorro','RxJS', 'SweetAlert2'],
+      nameKey: 'Rick and Morty APP',
+      typeKey: 'project.api',
+      descKey: 'proj.rickmorty.desc',
+      stack: ['Angular', 'REST API', 'reCAPTCHA', 'Ng Zorro', 'RxJS'],
       githubUrl: 'https://github.com/D4nf313/heroes-app',
+      emoji: '🚀',
+      color: '#06b6d4',
     },
     {
-      name: 'Viajes App',
-      type: 'Aplicación Web',
-      description:
-        'Es una plataforma web que permite a los usuarios buscar ubicaciones exactas de sus destinos de viaje, teniendo un mapa donde pueden visualizar sus destinos, escogerlo y enviar la petición para que el equipo de trabajo pueda generar un plan de viaje..',
-      stack: ['Angular', 'Bootstrap', 'Leaflet','RxJS','Socket.io-client'],
+      nameKey: 'Viajes App',
+      typeKey: 'project.webapp',
+      descKey: 'proj.viajes.desc',
+      stack: ['Angular', 'Bootstrap', 'Leaflet', 'RxJS', 'Socket.io'],
       githubUrl: 'https://github.com/D4nf313/viajesApp',
+      emoji: '🗺️',
+      color: '#ec4899',
     },
   ];
+
   openGithub(url: string) {
     window.open(url, '_blank');
   }

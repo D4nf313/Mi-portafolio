@@ -1,0 +1,10 @@
+22e405f Fix Angular SPA rewrites for Vercel
+ff5a67a Fix Angular SPA routing on Vercel
+6aaa60a add contactarme funcional
+cefed5d redireccion card proyectos a github
+8def70e ajustes adicionales
+b26a380 ajuste tamaño chip proyectos
+6314999 Cambio img perfil
+e919e88 Fix ajuste title sobre mi y add logo personal
+ef0d96a add mas proyectos
+119e144 add descarga cv

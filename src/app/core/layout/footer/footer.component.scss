@@ -1,8 +1,9 @@
 .footer {
-  background: #1c2533;
+  background: var(--footer-bg);
   padding: 40px 24px 24px;
-  border-top: 1px solid #8e7cc3;
-  color: #dcdcdc;
+  border-top: 1px solid var(--border);
+  color: var(--text-secondary);
+  transition: background 0.35s ease;
 }
 
 /* CONTENT */
@@ -23,47 +24,45 @@
 .footer-section h4 {
   margin-bottom: 12px;
   font-weight: 400;
-  color: #8e7cc3; /* MORADO */
+  color: var(--accent);
 }
 
 .footer-section p {
   margin: 6px 0;
   font-size: 0.95rem;
-  color: #dcdcdc;
+  color: var(--text-secondary);
 }
 
-/* LINKS (si luego los conviertes en <a>) */
 .footer-section a {
-  color: #dcdcdc;
+  color: var(--text-secondary);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer-section a:hover {
-  color: #8e7cc3;
+  color: var(--accent);
 }
 
 /* BOTTOM */
 .footer-bottom {
   margin-top: 32px;
   padding-top: 16px;
-  border-top: 1px solid rgba(142, 124, 195, 0.3);
+  border-top: 1px solid var(--border);
   text-align: center;
   font-size: 0.85rem;
-  color: #b0a8d6;
+  color: var(--text-secondary);
 }
 
 .footer-links a {
-  color: #dcdcdc;
+  color: var(--text-secondary);
   text-decoration: none;
   font-weight: 400;
   transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: #8e7cc3;
+  color: var(--accent);
 }
-
 
 /* RESPONSIVE */
 @media (max-width: 768px) {

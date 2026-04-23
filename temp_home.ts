@@ -1,7 +1,8 @@
-import { Component, inject, AfterViewInit, OnDestroy } from '@angular/core';
+import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterLink } from '@angular/router';
-import { LanguageService } from '../../core/services/language.service';
+
+
 
 interface Point {
   x: number;
@@ -25,13 +26,13 @@ class Circle {
 
   draw(ctx: CanvasRenderingContext2D) {
     if (!this.active) return;
+
     ctx.beginPath();
     ctx.arc(this.pos.x, this.pos.y, this.radius, 0, Math.PI * 2);
     ctx.fillStyle = `rgba(156,217,249,${this.active})`;
     ctx.fill();
   }
 }
-
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -39,8 +40,7 @@ class Circle {
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent implements AfterViewInit, OnDestroy {
-  lang = inject(LanguageService);
+export class HomeComponent {
 
   private canvas!: HTMLCanvasElement;
   private ctx!: CanvasRenderingContext2D;
@@ -69,10 +69,7 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
     this.height = window.innerHeight;
     this.target = { x: this.width / 2, y: this.height / 2 };
 
-    const canvasElement = document.getElementById('demo-canvas');
-    if (!canvasElement) return;
-    
-    this.canvas = canvasElement as HTMLCanvasElement;
+    this.canvas = document.getElementById('demo-canvas') as HTMLCanvasElement;
     this.ctx = this.canvas.getContext('2d')!;
     this.canvas.width = this.width;
     this.canvas.height = this.height;
@@ -104,8 +101,10 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
   private findClosest(): void {
     for (const p1 of this.points) {
       const closest: Point[] = [];
+
       for (const p2 of this.points) {
         if (p1 === p2) continue;
+
         let placed = false;
         for (let i = 0; i < 5; i++) {
           if (!placed && !closest[i]) {
@@ -113,13 +112,18 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
             placed = true;
           }
         }
+
         for (let i = 0; i < 5; i++) {
-          if (!placed && this.getDistance(p1, p2) < this.getDistance(p1, closest[i])) {
+          if (
+            !placed &&
+            this.getDistance(p1, p2) < this.getDistance(p1, closest[i])
+          ) {
             closest[i] = p2;
             placed = true;
           }
         }
       }
+
       p1.closest = closest;
     }
   }
@@ -142,10 +146,8 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
   private resize = (): void => {
     this.width = window.innerWidth;
     this.height = window.innerHeight;
-    if(this.canvas) {
-      this.canvas.width = this.width;
-      this.canvas.height = this.height;
-    }
+    this.canvas.width = this.width;
+    this.canvas.height = this.height;
   };
 
   private initAnimation(): void {
@@ -154,7 +156,7 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
   }
 
   private animate = (): void => {
-    if (this.animateHeader && this.ctx) {
+    if (this.animateHeader) {
       this.ctx.clearRect(0, 0, this.width, this.height);
 
       for (const p of this.points) {
@@ -207,6 +209,7 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
 
   private drawLines(p: Point): void {
     if (!p.active) return;
+
     for (const close of p.closest) {
       this.ctx.beginPath();
       this.ctx.moveTo(p.x, p.y);

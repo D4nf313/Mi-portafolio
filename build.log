@@ -1,0 +1,15 @@
+Application bundle generation failed. [9.232 seconds]
+
+X [ERROR] NG5002: Incomplete block "gmail". If you meant to write the @ character, you should use the "&#64;" HTML entity instead. [plugin angular-compiler]
+
+    src/app/core/layout/footer/footer.component.html:9:25:
+      9 │       <p>Email: danfecisf@gmail.com</p>
+        ╵                          ~~~~~~
+
+  Error occurs in the template of component FooterComponent.
+
+    src/app/core/layout/footer/footer.component.ts:8:15:
+      8 │   templateUrl: './footer.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+

@@ -1,33 +1,23 @@
 <section class="projects-section">
+  <h2 class="section-title">{{ lang.t('projects.title') }}</h2>
+  <div class="section-divider"></div>
 
-      <!-- TÍTULO -->
-      <h2 class="section-title">Proyectos</h2>
-      <div class="section-divider"></div>
-
-      <!-- GRID -->
-      <div class="projects-grid">
-        <mat-card
-          class="project-card"
-          *ngFor="let project of projects"
-            (click)="openGithub(project.githubUrl)"
-        >
-          <mat-card-header>
-            <mat-card-title>{{ project.name }}</mat-card-title>
-            <mat-card-subtitle>{{ project.type }}</mat-card-subtitle>
-          </mat-card-header>
-
-          <mat-card-content>
-            <p class="description">
-              {{ project.description }}
-            </p>
-
-            <mat-chip-set  class="small-chips">
-              <mat-chip *ngFor="let tech of project.stack">
-                {{ tech }}
-              </mat-chip>
-            </mat-chip-set>
-          </mat-card-content>
-        </mat-card>
+  <div class="projects-list">
+    <div class="project-card" *ngFor="let project of projects">
+      <div class="card-visual" [style.--project-color]="project.color">
+        <div class="card-emoji">{{ project.emoji }}</div>
       </div>
-
-    </section>
+      <div class="card-info">
+        <h3 class="project-name">{{ project.nameKey }}</h3>
+        <span class="project-type">{{ lang.t(project.typeKey) }}</span>
+        <p class="project-desc">{{ lang.t(project.descKey) }}</p>
+        <div class="stack-chips">
+          <span class="chip" *ngFor="let tech of project.stack">{{ tech }}</span>
+        </div>
+        <button class="btn-github" (click)="openGithub(project.githubUrl)">
+          {{ lang.t('projects.github') }}
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

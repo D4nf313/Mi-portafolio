@@ -1,118 +1,81 @@
-
-
 .about-section {
-
-  min-height: 100vh;
   padding: 80px 24px;
-  background: #1c2533;
-  color: #dcdcdc;
 }
 
-/* Título */
 .section-title {
+  font-size: 2.5rem;
   text-align: center;
-  font-size: 2.6rem;
-  font-weight: 300;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
 .section-divider {
-  width: 200px;
-  height: 2px;
-  background: #8e7cc3;
-  margin: 0 auto 60px;
+  width: 100px;
+  height: 4px;
+  background: var(--accent);
+  margin: 0 auto 50px;
 }
 
-/* Quién soy */
 .about-me {
   display: flex;
-  gap: 48px;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto 60px;
   align-items: center;
-  justify-content: center;
-  max-width: 1100px;
-  margin: 0 auto 80px;
-  flex-wrap: wrap;
 }
 
 .about-photo img {
-  width: 200px;
-  height: 200px;
+  width: 250px;
   border-radius: 50%;
-  border: 3px solid #8e7cc3;
-  object-fit: contain;   /* 👈 clave */
-  background-color: #ffffff;
-}
-.about-text {
-  max-width: 600px;
+  border: 4px solid var(--accent);
 }
 
-.about-text h3 {
-  margin-bottom: 16px;
-  font-weight: 400;
+.about-text h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
-/* Skills */
+.about-text p {
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
 .skills-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  max-width: 1100px;
+  gap: 40px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
-.skills-title {
-  font-weight: 300;
-  font-size: 2rem;
-  margin-bottom: 12px;
-}
-
-.skills-divider {
-  width: 120px;
-  height: 2px;
-  background: #8e7cc3;
-  margin-bottom: 32px;
-}
-
-/* Tech skills */
 .tech-skills {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .skill {
-  padding: 12px;
-  border: 1px solid #8e7cc3;
-  text-align: center;
-  letter-spacing: 0.1em;
-  font-size: 0.85rem;
-  transition: all 0.3s ease;
+  background: var(--bg-secondary);
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
 }
 
-.skill:hover {
-  background: #8e7cc3;
-  color: #111;
-}
-
-/* Soft skills */
 .soft-skills {
   list-style: none;
   padding: 0;
 }
 
 .soft-skills li {
-  margin-bottom: 16px;
-  font-size: 1rem;
-  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+  color: var(--text-secondary);
 }
 
-
-
-
-/* Responsive */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
+  .about-me {
+    flex-direction: column;
+    text-align: center;
+  }
   .skills-grid {
     grid-template-columns: 1fr;
-    gap: 60px;
   }
 }

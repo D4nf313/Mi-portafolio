@@ -1,80 +1,95 @@
-/* SECTION */
 .projects-section {
-  min-height: 100vh;
   padding: 80px 24px;
-  background: #1c2533;
-  color: #dcdcdc;
 }
 
-.section-title {
-  text-align: center;
-  font-size: 2.6rem;
-  font-weight: 300;
-  margin-bottom: 16px;
-}
-
-.section-divider {
-  width: 200px;
-  height: 2px;
-  background: #8e7cc3;
-  margin: 0 auto 80px;
-}
-
-/* GRID */
-.projects-grid {
-  max-width: 1100px;
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 900px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 32px;
 }
 
-/* CARD */
 .project-card {
-  background: #252f41;
-  border: 1px solid #8e7cc3;
-  color: #dcdcdc;
+  display: flex;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
   border-radius: 16px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
 }
 
-.project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+.card-visual {
+  width: 150px;
+  background: var(--project-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
 }
 
-mat-card-title {
-  font-size: 1.6rem;
-  font-weight: 400;
+.card-info {
+  padding: 24px;
+  flex: 1;
 }
 
-mat-card-subtitle {
-  color: #b0a8d6;
+.project-name {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  color: var(--accent);
 }
 
-.description {
-  margin: 16px 0;
+.project-type {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.project-desc {
+  margin: 15px 0;
   line-height: 1.5;
+  color: var(--text-secondary);
 }
 
-mat-chip {
-  background: #8e7cc3;
-  color: #111;
-  font-size: 0.75rem;
-  margin-right: 6px;
+.stack-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
 }
 
-.small-chips mat-chip {
-  font-size: 11px;
-  height: 22px;
-  padding: 0 8px;
+.chip {
+  background: var(--bg-secondary);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  border: 1px solid var(--border);
 }
 
-.small-chips mat-chip .mat-chip-content {
-  line-height: 22px;
+.btn-github {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+
+  &:hover {
+    background: var(--accent-alt);
+  }
 }
 
-.small-chips {
-  --mdc-chip-label-text-size: 11px;
-  --mdc-chip-container-height: 22px;
+@media (max-width: 600px) {
+  .project-card {
+    flex-direction: column;
+  }
+  .card-visual {
+    width: 100%;
+    height: 100px;
+  }
 }

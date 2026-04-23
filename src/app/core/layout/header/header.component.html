@@ -1,11 +1,11 @@
-<mat-toolbar color="primary" class="navbar">
-<span class="logo">
-  <img
-    src="../../../../assets/logodf3.jpg"
-    alt="Logo"
-    class="logo-img"
-  >
-</span>
+<mat-toolbar class="navbar">
+  <span class="logo">
+    <img
+      src="../../../../assets/logodf3.jpg"
+      alt="Logo"
+      class="logo-img"
+    >
+  </span>
 
   <span class="spacer"></span>
 
@@ -15,40 +15,42 @@
       routerLink="/portafolio-daniel-suarez-full-stack"
       routerLinkActive="active"
       [routerLinkActiveOptions]="{ exact: true }"
-    >
-      Inicio
-    </a>
+    >{{ lang.t('nav.home') }}</a>
 
     <a
       mat-button
       routerLink="/portafolio-daniel-suarez-full-stack/about"
       routerLinkActive="active"
-    >
-      Sobre mí
-    </a>
+    >{{ lang.t('nav.about') }}</a>
 
     <a
       mat-button
       routerLink="/portafolio-daniel-suarez-full-stack/experience"
       routerLinkActive="active"
-    >
-      Experiencia
-    </a>
+    >{{ lang.t('nav.experience') }}</a>
 
     <a
       mat-button
       routerLink="/portafolio-daniel-suarez-full-stack/projects"
       routerLinkActive="active"
-    >
-      Proyectos
-    </a>
+    >{{ lang.t('nav.projects') }}</a>
 
     <a
       mat-button
       routerLink="/portafolio-daniel-suarez-full-stack/contact"
       routerLinkActive="active"
-    >
-      Contáctame
-    </a>
+    >{{ lang.t('nav.contact') }}</a>
   </nav>
+
+  <div class="header-actions">
+    <div class="lang-switcher">
+      <button (click)="lang.setLang('es')" [class.active]="lang.lang() === 'es'">ES</button>
+      <span>|</span>
+      <button (click)="lang.setLang('en')" [class.active]="lang.lang() === 'en'">EN</button>
+    </div>
+
+    <button class="theme-toggle" (click)="theme.toggle()">
+      {{ theme.isDark() ? '🌙' : '☀️' }}
+    </button>
+  </div>
 </mat-toolbar>

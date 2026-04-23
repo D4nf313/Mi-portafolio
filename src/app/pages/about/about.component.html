@@ -1,96 +1,37 @@
 <section class="about-section">
-  <!-- TÍTULO -->
-  <h2 class="section-title">Sobre Mí</h2>
+  <h2 class="section-title">{{ lang.t('about.title') }}</h2>
   <div class="section-divider"></div>
 
-  <!-- QUIÉN SOY -->
   <div class="about-me">
     <div class="about-photo">
-      <img src="assets/img_perfil_portafolio.png" alt="Foto perfil" />
+      <img src="assets/img_perfil_portafolio.png" alt="Profile Photo" />
     </div>
-
     <div class="about-text">
-      <h1>¿Quién soy? 💬</h1>
-      <p>
-        Full Stack Developer con más de dos años de experiencia en el desarrollo
-        de aplicaciones web usando Angular, Spring Boot y MySQL. He participado
-        en proyectos de alto impacto para entidades gubernamentales, liderando
-        entregas técnicas y optimizando funcionalidades para mejorar el
-        rendimiento y la mantenibilidad. Trabajo bajo buenas prácticas de
-        desarrollo, pruebas unitarias y patrones de arquitectura. Además, tengo
-        conocimientos en Python aplicados a IA y análisis de datos. Me
-        caracterizo por mi pensamiento analítico, trabajo en equipo y enfoque en
-        construir soluciones eficientes y de calidad.
-      </p>
+      <h1>{{ lang.t('about.who') }}</h1>
+      <p>{{ lang.t('about.bio') }}</p>
     </div>
   </div>
 
-  <!-- SKILLS -->
   <div class="skills-grid">
-    <!-- TECH SKILLS -->
     <div class="skills-column">
-      <h3 class="skills-title">Habilidades tecnicas</h3>
+      <h3 class="skills-title">{{ lang.t('about.techSkills') }}</h3>
       <div class="skills-divider"></div>
-
       <div class="tech-skills">
         <div class="skill">Angular</div>
         <div class="skill">TypeScript</div>
-        <div class="skill">RxJS</div>
-        <div class="skill">HTML5</div>
-        <div class="skill">CSS3</div>
-        <div class="skill">Angular Material</div>
-        <div class="skill">PrimeNG</div>
-        <div class="skill">Bootstrap</div>
-        <div class="skill">Jasmine / Karma</div>
-        <div class="skill">Cypress</div>
-
-        <!-- Backend -->
-        <div class="skill">Java</div>
         <div class="skill">Spring Boot</div>
-        <div class="skill">Spring Web (REST API)</div>
-        <div class="skill">Spring Data JPA</div>
-        <div class="skill">Hibernate</div>
-        <div class="skill">Spring Security</div>
-        <div class="skill">JWT</div>
-        <div class="skill">OAuth2</div>
-
-        <!-- Bases de datos -->
         <div class="skill">MySQL</div>
-        <div class="skill">PostgreSQL</div>
-        <div class="skill">MongoDB</div>
-        <div class="skill">Redis</div>
-
-        <!-- DevOps / Herramientas -->
         <div class="skill">Git</div>
-        <div class="skill">GitHub</div>
         <div class="skill">Docker</div>
-        <div class="skill">Docker Compose</div>
-        <div class="skill">Maven</div>
-        <div class="skill">CI/CD</div>
-
-        <!-- Documentación y arquitectura -->
-        <div class="skill">Swagger / OpenAPI</div>
-        <div class="skill">Clean Architecture</div>
-        <div class="skill">SOLID Principles</div>
-
-        <!-- Otros -->
-        <div class="skill">REST</div>
-        <div class="skill">JSON</div>
-        <div class="skill">Python</div>
       </div>
     </div>
-
-    <!-- SOFT SKILLS -->
     <div class="skills-column">
-      <h3 class="skills-title">Habilidades blandas</h3>
+      <h3 class="skills-title">{{ lang.t('about.softSkills') }}</h3>
       <div class="skills-divider"></div>
-
       <ul class="soft-skills">
-        <li>▶ Responsabilidad</li>
-        <li>▶ Scrum</li>
-        <li>▶ Trabajo en equipo</li>
-        <li>▶ Perseverancia</li>
-        <li>▶ Dedicación</li>
+        <li>{{ lang.t('soft.responsibility') }}</li>
+        <li>{{ lang.t('soft.scrum') }}</li>
+        <li>{{ lang.t('soft.teamwork') }}</li>
       </ul>
     </div>
   </div>

@@ -1,41 +1,57 @@
-   .content {
-      padding: 16px;
-      min-height: calc(100vh - 128px);
-    }
-    
-/* ===== SUCCESS DIALOG DARK PURPLE ===== */
-.success-dialog-dark .mat-mdc-dialog-surface {
-  background-color: #1c2533 !important;
-  color: #e6e6e6 !important;
-
-  border: 1px solid #8e7cc3;
-  border-radius: 16px;
-  box-shadow: 0 0 25px rgba(142, 124, 195, 0.45);
+/* ============================================================
+   CSS CUSTOM PROPERTIES – THEME SYSTEM
+   ============================================================ */
+:root,
+:root[data-theme="dark"] {
+  --bg-primary:     #0f172a;
+  --bg-secondary:   #1e293b;
+  --bg-card:        #1e2b3a;
+  --header-bg:      rgba(15, 23, 42, 0.9);
+  --text-primary:   #f8fafc;
+  --text-secondary: #94a3b8;
+  --accent:         #a78bfa;
+  --accent-alt:     #8b5cf6;
+  --accent-muted:   rgba(167, 139, 250, 0.1);
+  --border:         rgba(167, 139, 250, 0.2);
+  --border-hover:   rgba(167, 139, 250, 0.5);
+  --shadow:         rgba(0, 0, 0, 0.4);
+  --glow:           rgba(167, 139, 250, 0.3);
+  --divider:        #a78bfa;
+  --chip-bg:        rgba(167, 139, 250, 0.1);
+  --chip-text:      #c4b5fd;
+  --footer-bg:      #0f1724;
 }
 
-/* TÍTULO */
-.success-dialog-dark .mat-mdc-dialog-title {
-  color: #f0eaff !important;
-  font-weight: 400;
+:root[data-theme="light"] {
+  --bg-primary:     #f8fafc;
+  --bg-secondary:   #f1f5f9;
+  --bg-card:        #ffffff;
+  --header-bg:      rgba(255, 255, 255, 0.9);
+  --text-primary:   #0f172a;
+  --text-secondary: #475569;
+  --accent:         #7c3aed;
+  --accent-alt:     #6d28d9;
+  --accent-muted:   rgba(124, 58, 237, 0.1);
+  --border:         rgba(124, 58, 237, 0.2);
+  --border-hover:   rgba(124, 58, 237, 0.5);
+  --shadow:         rgba(0, 0, 0, 0.05);
+  --glow:           rgba(124, 58, 237, 0.2);
+  --divider:        #7c3aed;
+  --chip-bg:        rgba(124, 58, 237, 0.05);
+  --chip-text:      #6d28d9;
+  --footer-bg:      #1e1b4b;
 }
 
-/* CONTENIDO */
-.success-dialog-dark .mat-mdc-dialog-content,
-.success-dialog-dark .mat-mdc-dialog-content p,
-.success-dialog-dark .mat-mdc-dialog-content span {
-  color: #e0e0e0 !important;
-  font-size: 1rem;
-  line-height: 1.6;
+/* Base Styles */
+body {
+  margin: 0;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, sans-serif;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* BOTÓN */
-.success-dialog-dark .mat-mdc-raised-button {
-  background-color: #8e7cc3 !important;
-  color: #111 !important;
+.content {
+  padding: 16px;
+  min-height: calc(100vh - 128px);
 }
-
-/* QUITA OPACIDADES HEREDADAS */
-.success-dialog-dark * {
-  opacity: 1 !important;
-}
-
