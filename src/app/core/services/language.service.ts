@@ -29,16 +29,25 @@ const translations: Record<Lang, Record<string, string>> = {
     // PROJECTS
     'projects.title': 'Proyectos',
     'projects.github': 'GitHub',
+    'projects.deployed': 'desplegado',
+    'projects.live': 'Ver sitio',
+    'projects.repo': 'Repo',
     // PROJECT TYPES
     'project.webapp': 'Aplicación Web',
     'project.ecommerce': 'E-commerce Agro',
     'project.api': 'Consumo de API',
-    // PROJECT DESCRIPTIONS
+    'project.fullstack': 'Full Stack',
+    'project.spa': 'SPA / Frontend',
+    // PROJECT DESCRIPTIONS — desplegados
+    'proj.simpsons.desc': 'Aplicación full stack de personajes de Los Simpson. API REST en Spring Boot 3 con PostgreSQL y frontend en Angular 18. Contenedorizada con Docker y desplegada en Render.',
+    'proj.pm.desc': 'SaaS MVP para gestión de proyectos con workspaces y roles (Admin, Editor, Lector). Autenticación JWT en dos pasos. Stack completo con Angular 18, Spring Boot 3 y MySQL, orquestado con Docker Compose.',
+    'proj.intercommerce.desc': 'SPA de e-commerce desarrollada como prueba técnica con React 19 y TypeScript. Catálogo con filtros, carrito persistente con Zustand y suite de pruebas con Vitest.',
+    // PROJECT DESCRIPTIONS — otros
     'proj.olimpia.desc': 'Plataforma de comercio electrónico para venta de tenis, con catálogo de productos, carrito de compras y gestión de pedidos.',
     'proj.tierra.desc': 'E-commerce enfocado en productos agrícolas, conectando productores locales con compradores finales.',
     'proj.nasa.desc': 'Aplicación que consume la API de la NASA para mostrar imágenes satelitales recientes. Permite al usuario guardar sus imágenes favoritas en LocalStorage.',
     'proj.pokemon.desc': 'Aplicación que consume la API de Pokémon (PokeAPI) para buscar y mostrar información de cualquier Pokémon.',
-    'proj.rickmorty.desc': 'Aplicación web desarrollada con Angular 19 con autenticación de usuario e integración de API de Rick and Morty.',
+    'proj.rickmorty.desc': 'Aplicación web desarrollada con Angular 19 con autenticación de usuario reCAPTCHA e integración de API de Rick and Morty.',
     'proj.viajes.desc': 'Plataforma web que permite buscar ubicaciones de destinos de viaje y visualizarlos en un mapa interactivo.',
     // CONTACT
     'contact.title': 'Contáctame',
@@ -84,14 +93,23 @@ const translations: Record<Lang, Record<string, string>> = {
     // PROJECTS
     'projects.title': 'Projects',
     'projects.github': 'GitHub',
+    'projects.deployed': 'live',
+    'projects.live': 'View site',
+    'projects.repo': 'Repo',
     // PROJECT TYPES
     'project.webapp': 'Web Application',
     'project.ecommerce': 'Agro E-commerce',
     'project.api': 'API Integration',
-    // PROJECT DESCRIPTIONS
+    'project.fullstack': 'Full Stack',
+    'project.spa': 'SPA / Frontend',
+    // PROJECT DESCRIPTIONS — deployed
+    'proj.simpsons.desc': 'Full stack Simpsons character app. Spring Boot 3 REST API with PostgreSQL and Angular 18 frontend. Dockerized and deployed on Render.',
+    'proj.pm.desc': 'Project management SaaS MVP with workspaces and role-based access (Admin, Editor, Reader). Two-step JWT auth flow. Angular 18 + Spring Boot 3 + MySQL, orchestrated with Docker Compose.',
+    'proj.intercommerce.desc': 'E-commerce SPA built as a technical assessment with React 19 and TypeScript. Product catalog with filters, persistent cart via Zustand, and integration tests with Vitest.',
+    // PROJECT DESCRIPTIONS — others
     'proj.olimpia.desc': 'E-commerce platform for sports shoe sales with product catalog, shopping cart, and order management.',
     'proj.tierra.desc': 'E-commerce focused on agricultural products, connecting local producers with end buyers.',
-    'proj.nasa.desc': 'App consuming NASA\'s API to display recent satellite imagery.',
+    'proj.nasa.desc': 'App consuming NASA\'s API to display recent satellite imagery. Users can save favorite images to LocalStorage.',
     'proj.pokemon.desc': 'App consuming the PokéAPI to search and display info about any Pokémon.',
     'proj.rickmorty.desc': 'Angular 19 web app with user authentication and Rick and Morty API integration.',
     'proj.viajes.desc': 'Web platform to search travel destination locations and view them on an interactive map.',

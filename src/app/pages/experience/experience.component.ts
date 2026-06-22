@@ -15,7 +15,7 @@ export class ExperienceComponent {
   experiences = [
     {
       company: 'Broers',
-      date: '06/2025 – Presente',
+      date: '06/2025 – 05/2026',
       role: 'Desarrollador Full Stack',
       location: 'Medellín',
       details: [

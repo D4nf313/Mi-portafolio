@@ -1,95 +1,370 @@
+// ─── Section ─────────────────────────────────────────────────────────────────
+
 .projects-section {
-  padding: 80px 24px;
+  padding: 3rem 0;
+  margin:1.5rem ;
 }
 
-.projects-list {
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary, #e2e8f0);
+  margin: 0 0 0.5rem;
+}
+
+.section-divider {
+  height: 2px;
+  width: 3rem;
+  background: var(--accent, #7c3aed);
+  border-radius: 2px;
+  margin-bottom: 2.5rem;
+}
+
+// ─── Carousel wrapper ────────────────────────────────────────────────────────
+
+.carousel-container {
+  position: relative;
   display: flex;
-  flex-direction: column;
-  gap: 30px;
-  max-width: 900px;
-  margin: 0 auto;
+  align-items: center;
+  gap: 0.75rem;
+  
 }
 
-.project-card {
-  display: flex;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-
-  &:hover {
-    transform: translateY(-5px);
-  }
-}
-
-.card-visual {
-  width: 150px;
-  background: var(--project-color);
+// Flechas
+.arrow {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #1a2235;
+  border: 1px solid #2a3550;
+  color: #afa9ec;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3rem;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+  z-index: 1;
+
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  &:hover {
+    background: #252f48;
+    border-color: #7c3aed;
+    transform: scale(1.05);
+  }
+
+  &:active { transform: scale(0.97); }
 }
 
-.card-info {
-  padding: 24px;
+// Track scrollable
+.carousel-track {
+  display: flex;
+  gap: 1.25rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 6px 2px 12px;    // espacio para que no se corte la sombra del hover
+
+  // ocultar scrollbar pero mantener funcionalidad
+  scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
+}
+
+// ─── Card ────────────────────────────────────────────────────────────────────
+
+.project-card {
+  width: 450px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  background: #0f1420;
+  border: 1px solid #1e2a3a;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    border-color: #3a3560;
+    transform: translateY(-4px);
+  }
+}
+
+// ─── Browser frame ───────────────────────────────────────────────────────────
+
+.card-preview {
+  display: flex;
+  flex-direction: column;
+  height: 210px;
+  flex-shrink: 0;
+}
+
+.browser-bar {
+  height: 26px;
+  background: #1a2235;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 10px;
+  flex-shrink: 0;
+}
+
+.browser-dots {
+  display: flex;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+
+  &--red    { background: #ff5f57; }
+  &--yellow { background: #febc2e; }
+  &--green  { background: #28c840; }
+}
+
+.browser-url {
+  flex: 1;
+  height: 13px;
+  background: #0f1420;
+  border-radius: 4px;
+  font-size: 9px;
+  color: #4a5568;
+  display: flex;
+  align-items: center;
+  padding: 0 6px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-family: monospace;
+}
+
+.preview-image {
+  flex: 1;
+  background: color-mix(in srgb, var(--project-color, #7c3aed) 15%, #1a2235);
+  position: relative;
+  overflow: hidden;
+
+  .screenshot {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+  }
+}
+
+.screenshot-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .placeholder-emoji {
+    font-size: 3rem;
+    opacity: 0.55;
+  }
+}
+
+// ─── Card body ───────────────────────────────────────────────────────────────
+
+.card-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
   flex: 1;
 }
 
+.card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+
 .project-name {
-  font-size: 1.5rem;
-  margin-bottom: 5px;
-  color: var(--accent);
+  font-size: 1rem;
+  font-weight: 600;
+  color: #afa9ec;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.badge-deployed {
+  font-size: 9px;
+  background: #085041;
+  color: #9fe1cb;
+  padding: 2px 7px;
+  border-radius: 20px;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .project-type {
-  font-size: 0.8rem;
-  color: var(--text-secondary);
+  font-size: 10px;
+  color: #4a5568;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .project-desc {
-  margin: 15px 0;
+  font-size: 0.8125rem;
+  color: #8892a4;
   line-height: 1.5;
-  color: var(--text-secondary);
+  margin: 0;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
+
+// ─── Stack chips ─────────────────────────────────────────────────────────────
 
 .stack-chips {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 20px;
+  gap: 4px;
 }
 
 .chip {
-  background: var(--bg-secondary);
-  padding: 4px 12px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  border: 1px solid var(--border);
+  font-size: 10px;
+  background: #1a2235;
+  color: #64748b;
+  padding: 3px 8px;
+  border-radius: 10px;
+  border: 1px solid #1e2a3a;
+  white-space: nowrap;
 }
 
-.btn-github {
-  background: var(--accent);
-  color: #fff;
-  border: none;
-  padding: 8px 20px;
-  border-radius: 6px;
+// ─── Actions ─────────────────────────────────────────────────────────────────
+
+.card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 0.25rem;
+}
+
+.btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 8px 12px;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 500;
   cursor: pointer;
-  font-weight: 600;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  border: none;
 
-  &:hover {
-    background: var(--accent-alt);
+  &:hover  { opacity: 0.82; }
+  &:active { transform: scale(0.97); }
+
+  &--outline {
+    background: transparent;
+    border: 1px solid #3a3560;
+    color: #afa9ec;
+    &:hover { background: #1a2235; }
+  }
+
+  &--primary {
+    background: #7c3aed;
+    color: #fff;
   }
 }
 
-@media (max-width: 600px) {
+.btn-icon {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+}
+
+// ─── Light theme ─────────────────────────────────────────────────────────────
+
+:host-context([data-theme="light"]) {
+
   .project-card {
-    flex-direction: column;
+    background: #ffffff;
+    border-color: #e2e0f0;
+
+    &:hover { border-color: #a09bdd; }
   }
-  .card-visual {
-    width: 100%;
-    height: 100px;
+
+  .browser-bar { background: #ede9fb; }
+
+  .browser-url {
+    background: #d8d4f5;
+    color: #7c6fbf;
   }
+
+  .preview-image {
+    background: color-mix(in srgb, var(--project-color, #7c3aed) 12%, #f0eeff);
+  }
+
+  .project-name { color: #3c3489; }
+
+  .project-type { color: #9490ba; }
+
+  .project-desc { color: #55516e; }
+
+  .badge-deployed {
+    background: #d1fae5;
+    color: #065f46;
+  }
+
+  .chip {
+    background: #f0eeff;
+    color: #6d68a0;
+    border-color: #ddd8f8;
+  }
+
+  .btn--outline {
+    border-color: #c4bfec;
+    color: #534ab7;
+
+    &:hover { background: #f0eeff; }
+  }
+
+  .btn--primary {
+    background: #7c3aed;
+    color: #fff;
+  }
+
+  .arrow {
+    background: #f0eeff;
+    border-color: #c4bfec;
+    color: #534ab7;
+
+    &:hover {
+      background: #e4dffb;
+      border-color: #7c3aed;
+    }
+  }
+}
+
+// ─── Responsive ──────────────────────────────────────────────────────────────
+
+@media (max-width: 768px) {
+  .arrow { display: none; }   // en móvil el swipe reemplaza las flechas
+
+  .project-card { width: 300px; }
+  .card-preview  { height: 175px; }
 }

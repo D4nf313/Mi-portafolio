@@ -4,7 +4,12 @@
   flex-direction: column;
   align-items: center;
 }
-
+.section-divider {
+  width: 100px;
+  height: 4px;
+  background: var(--accent);
+  margin: 0 auto 50px;
+}
 .contact-card {
   width: 100%;
   max-width: 500px;
